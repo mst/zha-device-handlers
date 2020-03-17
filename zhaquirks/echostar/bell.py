@@ -1,5 +1,4 @@
 """Echostar Bell Device."""
-"""Sage Doorbell Sensor Device."""
 from zigpy.profiles import zha
 from zigpy.quirks import CustomDevice
 from zigpy.zcl.clusters.general import (
@@ -78,8 +77,8 @@ class Bell(CustomDevice):
                     Ota.cluster_id,
                 ],
             }
-        },
+        }
     }
     device_automation_triggers = {
-        (SHORT_PRESS, TURN_ON): {COMMAND: COMMAND_ON, CLUSTER_ID: 6, ENDPOINT_ID: 18, },
+        (SHORT_PRESS, TURN_ON): {COMMAND: COMMAND_ON, CLUSTER_ID: 6, ENDPOINT_ID: 18}
     }
